@@ -21,7 +21,7 @@ ex2Base$
 
 // ----- Example-3: concatMap of withLatestFrom (ReplaySubject) -----
 const ex3Base$: Subject<number> = new Subject();
-const ex3wlf$: Subject<number> = new ReplaySubject();
+const ex3wlf$: Subject<number> = new ReplaySubject(1);
 registerCounterButton("ex3-baseBtn", cnt => `base [${cnt}]`, ex3Base$);
 registerCounterButton("ex3-wlfBtn", cnt => `withLatestFrom(ReplaySubject) [${cnt}]`, ex3wlf$);
 ex3Base$

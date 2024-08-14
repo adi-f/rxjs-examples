@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build" : "cp -rf app/index.html dist/index.html && cp -rf app/index.css dist/index.css && esbuild app/index.ts --bundle --target=chrome127 --outfile=dist/index.js"
+    "build" : "esbuild src/index.ts --bundle --target=chrome127 --outfile=dist/index.js && cp -rf src/index.html dist/index.html && cp -rf src/index.css dist/index.css"
   },
   "devDependencies": {
     "esbuild": "0.23.0",
